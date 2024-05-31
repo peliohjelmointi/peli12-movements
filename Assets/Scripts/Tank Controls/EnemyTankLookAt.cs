@@ -7,8 +7,7 @@ public class EnemyTankLookAt : MonoBehaviour
     [SerializeField] Transform playerTransform;
 
 
-
-    //v.1
+    //v.1 pelkistetty esimerkki, mutta raskaampi kuin v.2 (alla)
     // void Update()
     // {
     //     Vector2 direction = playerTransform.position - transform.position;
@@ -16,7 +15,7 @@ public class EnemyTankLookAt : MonoBehaviour
     // }
 
 
-    //v.2
+    //v.2 lasketaan rotation, vain jos lastRotation ei ole sama kuin nykyinen suunta
 
     Vector2 lastRotation;
 
@@ -26,7 +25,7 @@ public class EnemyTankLookAt : MonoBehaviour
         if (lastRotation != direction)
         {
             transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
-            //print("player moving");
+            print("player moving");
         }
 
 
