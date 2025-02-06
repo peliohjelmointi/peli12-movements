@@ -25,7 +25,7 @@ public class EnemyTankLookAt : MonoBehaviour
         if (lastRotation != direction)
         {
             transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
-            print("player moving");
+            //print("player moving");
         }
 
 
